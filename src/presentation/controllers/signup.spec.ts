@@ -13,6 +13,8 @@ describe('Signup Controller', () => {
       }
     }
     const httpResponse = sut.handle(httpRequest)
+
     expect(httpResponse.statusCode).to.equal(400)
+    expect(httpResponse.body).to.be.an('error')
   })
 })
